@@ -1,0 +1,70 @@
+<nav class="border split-nav" id="navbar1">
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <% if (!user) { %>
+    <li>
+      <a href="/register">Register</a>
+    </li>
+    <li>
+      <a href="/login">Login</a>
+    </li>
+    <% } %> <% if (user) { %>
+    <li>
+      <a href="/logout">Logout</a>
+    </li>
+    <% } %>
+  </ul>
+</nav>
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="css/index.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<div class="row flex-center" id="loginCard">
+    <div class="card" style="width: 52rem;">
+      <div class="card-body">
+        <form method="POST">
+          <div class="form-group">
+            <label for="username">Email</label>
+            <input
+              type="email"
+              id="username"
+              name="username"
+              class="input-block"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Create Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="input-block"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password_confirm">Retype Password above</label>
+            <input
+              type="password"
+              id="confirm"
+              name="confirm"
+              class="input-block"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-secondary btn-block">
+            Create my Account
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

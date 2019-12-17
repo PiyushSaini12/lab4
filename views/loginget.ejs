@@ -1,0 +1,82 @@
+<nav class="border split-nav" id="navbar1">
+  <ul>
+    <li>
+      <a href="/">Chat App</a>
+    </li>
+
+    <li>
+      <a href="/register">Register</a>
+    </li>
+    <li>
+      <a href="/login">Login</a>
+    </li>
+
+    <li>
+      <a href="/logout">Logout</a>
+    </li>
+  </ul>
+
+  <span class="badge success"> </span>
+</nav>
+<% if (messages.length > 0) { %>
+<div class="row flex-spaces">
+  <div class="alert alert-danger">
+    <%= messages.toString() %>
+  </div>
+</div>
+<% } else { %>
+<div class="row flex-spaces">
+  <div class="alert alert-secondary">
+    Please enter your credentials
+  </div>
+</div>
+<% } %>
+<h1>
+  <%= title %>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/papercss@1.5.1/dist/paper.min.css"
+  />
+</h1>
+<div class="row flex-center">
+  <div class="sm-4 col">
+    <div class="card" style="width: 20rem;">
+      <div class="card-body">
+        <form method="GET">
+          <div class="form-group">
+            <label for="username">Email</label>
+            <input
+              placeholder="Please type password here"
+              autocomplete="off"
+              type="email"
+              id="username"
+              name="username"
+              class="input-block"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              placeholder="Please type password here"
+              autocomplete="off"
+              type="password"
+              id="password"
+              name="password"
+              class="input-block"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary btn-block">
+            Login to my Account →
+          </button>
+          <br />
+        </form>
+      </div>
+      <div class="card-footer">
+        Need access?
+        <a href="/register">Register</a>
+      </div>
+    </div>
+  </div>
+</div>
